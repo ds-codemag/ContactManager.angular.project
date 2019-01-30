@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// Presets
+//
+// - Template settings
+// - Grid settings
+// -----------------------------------------------------------------------------
+
+// ----------------------------------------------------------- Template settings
+$print-styles:              true !default;
+$sizing-classes:            true !default;
+$text-classes:              true !default;
+$spacing-classes:           true !default;
+$flex-classes:              true !default;
+
+// z-index
+$zindex-dropdown:           1000 !default;
+$zindex-sticky:             1020 !default;
+$zindex-fixed:              1030 !default;
+$zindex-modal-backdrop:     1040 !default;
+$zindex-modal:              1050 !default;
+$zindex-popover:            1060 !default;
+$zindex-tooltip:            1070 !default;
+
+// Spacers for margin and padding classes
+$spacer:                    1rem !default;
+
+$spacers:               (
+                            0: 0,
+                            1: ($spacer * .25),
+                            2: ($spacer * .5),
+                            3: $spacer,
+                            4: ($spacer * 1.5),
+                            5: ($spacer * 3)
+                        ) !default;
+
+// Sizes map for `.h-*` and `.w-*` classes.
+$sizes:                 (
+                            25: 25%,
+                            50: 50%,
+                            75: 75%,
+                            100: 100%
+                        ) !default;
+
+// --------------------------------------------------------------- Grid settings
+$grid-columns:              12 !default; // Number of columns
+$grid-gutter-width:         30px !default; // Space between columns
+
+$grid-breakpoints:      (   // Breakpoints for media queries
+                            xs: 0,
+                            sm: 576px,
+                            md: 768px,
+                            lg: 992px,
+                            xl: 1200px
+                        ) !default;
+
+$container-max-widths:  (   // Container max widths
+                            sm: 540px,
+                            md: 720px,
+                            lg: 960px,
+                            xl: 1140px
+                        ) !default;
