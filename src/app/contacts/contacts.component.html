@@ -1,22 +1,36 @@
-<mat-accordion>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Kontakty
+        </mat-card-title>
+    </mat-card-header>
 
-    <mat-expansion-panel *ngFor="let contact of contacts">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                {{contact.name}}
-            </mat-panel-title>
-            <mat-panel-description>
-                <a href="tel:{{contact.number}}">{{contact.number}}</a>
-            </mat-panel-description>
-        </mat-expansion-panel-header>
+    <mat-card-content>
+        <mat-action-list>
+            <ng-container *ngFor="let contact of contacts; let i = index">
+                <mat-list-item (click)="onSelect(contact)" [ngClass]="{selected: selectedContact === contact}">
+                    <img matListAvatar [src]="contact.avatar" [alt]="contact.name">
+                    <p mat-line>{{contact.name}}</p>
+                    <p mat-line> {{contact.number}} </p>
+                    <mat-divider></mat-divider>
+                </mat-list-item>
+            </ng-container>
+        </mat-action-list>
+    </mat-card-content>
+</mat-card>
 
-        <mat-form-field>
-            <input matInput [(ngModel)]="contact.name" placeholder="Nazwa" [value]="contact.name">
+<mat-card *ngIf="selectedContact">
+    <mat-card-header>
+        <img mat-card-avatar [src]="selectedContact.avatar" [alt]="selectedContact.name">
+        <mat-card-title>{{selectedContact.name}}</mat-card-title>
+        <mat-card-subtitle>{{selectedContact.number}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="field-full-width">
+            <input matInput [(ngModel)]="selectedContact.name" placeholder="Nazwa" [value]="selectedContact.name">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput [(ngModel)]="contact.number" placeholder="Numer" [value]="contact.number">
+        <mat-form-field class="field-full-width">
+            <input type="tel" matInput [(ngModel)]="selectedContact.number" placeholder="Telefon" [value]="selectedContact.number">
         </mat-form-field>
-
-    </mat-expansion-panel>
-
-</mat-accordion>
+    </mat-card-content>
+</mat-card>

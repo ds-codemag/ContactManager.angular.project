@@ -1,0 +1,17 @@
+mat-card {
+    margin-bottom: 20px;
+}
+
+.field-full-width {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+}
+
+mat-list-item {
+    transition: color .3s;
+
+    &.selected {
+        color: #673ab7;
+    }
+}
