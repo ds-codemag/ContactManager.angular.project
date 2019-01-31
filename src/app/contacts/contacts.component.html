@@ -1,7 +1,22 @@
-<h2>{{contact.name}}</h2>
-<div>
-    <span>id: </span>{{contact.id}}
-</div>
-<div>
-    <span>number: </span><a href="tel:{{contact.number}}">{{contact.number}}</a>
-</div>
+<mat-accordion>
+
+    <mat-expansion-panel *ngFor="let contact of contacts">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{contact.name}}
+            </mat-panel-title>
+            <mat-panel-description>
+                <a href="tel:{{contact.number}}">{{contact.number}}</a>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="contact.name" placeholder="Nazwa" [value]="contact.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="contact.number" placeholder="Numer" [value]="contact.number">
+        </mat-form-field>
+
+    </mat-expansion-panel>
+
+</mat-accordion>

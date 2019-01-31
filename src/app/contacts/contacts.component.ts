@@ -8,10 +8,16 @@ import { Contact } from '../contact';
 })
 export class ContactsComponent implements OnInit {
 
-  contact: Contact;
+  contacts: Array<Contact>;
 
   constructor() {
-    this.contact = new Contact(1, 'Daniel', '+48111222333');
+    this.contacts = [
+        new Contact(1, 'Name Surname', '+48111222333'),
+        new Contact(2, 'Name Surname', '+48111222333'),
+        new Contact(3, 'Name Surname', '+48111222333'),
+        new Contact(4, 'Name Surname', '+48111222333'),
+        new Contact(5, 'Name Surname', '+48111222333')
+    ];
   }
 
   ngOnInit() {
