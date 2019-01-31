@@ -1,10 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatInputModule, MatCardModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatInputModule,
+  MatCardModule
+} from '@angular/material';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -20,11 +27,11 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     FormsModule,
-    MatButtonModule,
     LayoutModule,
+    MatButtonModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
