@@ -9,12 +9,14 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    NavigationComponent
+    NavigationComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
